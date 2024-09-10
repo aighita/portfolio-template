@@ -5,25 +5,19 @@ const navBar = {
 
 // Main Body SECTION
 const mainBody = {
+  show: true,
   gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
   gradientColors2: "#4584ce, #1ad9c0, #ff3b11, #5b59b6, #ff2f7f, #ecf4f1",
+  // Image to display as background. If image not found display gradient colors.
   imagineMyWork: "beautiful-pictures-of-nature-hd-1920x1080-wallpaper-preview.jpg",
-  firstName: "Hashir",
+  firstName: "Razvan",
   middleName: "",
-  lastName: "Shoaib",
-  message: " Passionate about changing the world with technology. ",
+  lastName: "Nedal",
+  message: " Storytelling through every shot. ",
   icons: [
     {
-      image: "fa-github",
-      url: "https://github.com/hashirshoaeb",
-    },
-    {
-      image: "fa-facebook",
-      url: "https://www.facebook.com/hashirshoaeb",
-    },
-    {
       image: "fa-instagram",
-      url: "https://www.instagram.com/hashirshoaeb/",
+      url: "https://www.instagram.com/nedal.ro/",
     },
     {
       image: "fa-linkedin",
@@ -52,11 +46,10 @@ const mainBody = {
 
 const about = {
   show: true,
-  heading: "My Story",
+  heading: "Razvan Nedal",
   imageLink: require("../editable-stuff/profile.jpeg"),
   imageSize: 375,
-  message:
-    "My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on open source projects.",
+  message: "Freelance Videographer & Photographer at Ned Media Network",
   resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
 };
 
@@ -73,54 +66,10 @@ const repos = {
   specificRepos: [],
 };
 
-// Leadership SECTION
-const leadership = {
-  show: false,
-  heading: "Leadership",
-  message:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae auctor eu augue ut lectus arcu bibendum at varius. Libero justo laoreet sit amet cursus sit amet. Imperdiet dui accumsan sit amet nulla facilisi morbi. At auctor urna nunc id. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris. In nisl nisi scelerisque eu ultrices vitae auctor. Mattis nunc sed blandit libero volutpat sed cras ornare. Pulvinar neque laoreet suspendisse interdum consectetur libero.",
-  images: [
-    { 
-      img: require("../editable-stuff/hashirshoaeb.png"), 
-      label: "First slide label", 
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
-    },
-    { 
-      img: require("../editable-stuff/hashirshoaeb.png"), 
-      label: "Second slide label", 
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
-    },
-  ],
-  imageSize: {
-    width:"615",
-    height:"450"
-  }
-};
-
-// SKILLS SECTION
-const skills = {
+const brands = {
   show: true,
-  heading: "Skills",
-  hardSkills: [
-    { name: "Python", value: 90 },
-    { name: "SQL", value: 75 },
-    { name: "Data Structures", value: 85 },
-    { name: "C/C++", value: 65 },
-    { name: "JavaScript", value: 90 },
-    { name: "React", value: 65 },
-    { name: "HTML/CSS", value: 55 },
-    { name: "C#", value: 80 },
-  ],
-  softSkills: [
-    { name: "Goal-Oriented", value: 80 },
-    { name: "Collaboration", value: 90 },
-    { name: "Positivity", value: 75 },
-    { name: "Adaptability", value: 85 },
-    { name: "Problem Solving", value: 75 },
-    { name: "Empathy", value: 90 },
-    { name: "Organization", value: 70 },
-    { name: "Creativity", value: 90 },
-  ],
+  heading: "Brands that trusted me.",
+  message: "Brands that trusted me.",
 };
 
 // GET IN TOUCH SECTION
@@ -132,26 +81,4 @@ const getInTouch = {
   email: "hashirshoaeb@gmail.com",
 };
 
-const experiences = {
-  show: false,
-  heading: "Experiences",
-  data: [
-    {
-      role: 'Software Engineer',// Here Add Company Name
-      companylogo: require('../assets/img/dell.png'),
-      date: 'June 2018 – Present',
-    },
-    {
-      role: 'Front-End Developer',
-      companylogo: require('../assets/img/boeing.png'),
-      date: 'May 2017 – May 2018',
-    },
-  ]
-}
-
-// Blog SECTION
-// const blog = {
-//   show: false,
-// };
-
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
+export { navBar, mainBody, about, repos, getInTouch };

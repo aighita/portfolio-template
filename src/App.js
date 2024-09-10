@@ -5,21 +5,19 @@ import {
   mainBody,
   about,
   repos,
-  leadership,
-  skills,
   getInTouch,
-  experiences
 } from "./editable-stuff/config.js";
+
+import Navbar from "./components/Navbar";
+
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
 import Project from "./components/home/Project";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-
 import GetInTouch from "./components/home/GetInTouch.jsx";
-import Leadership from "./components/home/Leadership.jsx";
 
-import Experience from "./components/home/Experience";
+import Footer from "./components/Footer";
+
+// import Home from "./pages/Home.jsx"
 
 const Home = React.forwardRef((props, ref) => {
   return (
@@ -27,7 +25,7 @@ const Home = React.forwardRef((props, ref) => {
       <MainBody
         gradient={mainBody.gradientColors}
         title={`${mainBody.firstName} ${mainBody.middleName} ${mainBody.lastName}`}
-        message={"MESAJUL MEU"}
+        message={mainBody.message}
         icons={mainBody.icons}
         ref={ref}
       />
@@ -40,11 +38,6 @@ const Home = React.forwardRef((props, ref) => {
           resume={about.resume}MESAJU
         />
       )}
-      {
-        experiences.show && (
-          <Experience experiences={experiences}/>
-        )
-      }
       {repos.show && (
         <Project
           heading={repos.heading}
@@ -53,22 +46,6 @@ const Home = React.forwardRef((props, ref) => {
           specfic={repos.specificRepos}
         />
       )}
-      {leadership.show && (
-        <Leadership
-          heading={leadership.heading}
-          message={leadership.message}
-          img={leadership.images}
-          imageSize={leadership.imageSize}
-        />
-      )}
-      {/* {skills.show && (
-        <Skills
-          heading={skills.heading}
-          hardSkills={skills.hardSkills}
-          softSkills={skills.softSkills}
-        />
-      )} */}
-      
     </>
   );
 });
@@ -76,7 +53,8 @@ const Home = React.forwardRef((props, ref) => {
 const MyWork = React.forwardRef((props, ref) => {
   return (
     <>
-      <MainBody
+      {mainBody.show && (
+        <MainBody
         // gradient={mainBody.gradientColors2}
         backgroundPhoto ={mainBody.imagineMyWork}
         title={`${mainBody.firstName} ${mainBody.middleName} ${mainBody.lastName}`}
@@ -84,45 +62,7 @@ const MyWork = React.forwardRef((props, ref) => {
         icons={mainBody.icons}
         ref={ref}
       />
-      {/* {about.show && (
-        <AboutMe
-          heading={about.heading}
-          message={about.message}
-          link={about.imageLink}
-          imgSize={about.imageSize}
-          resume={about.resume}
-        />
-      )} */}
-
-      {/* {
-        experiences.show && (
-          <Experience experiences={experiences}/>
-        )
-      } */}
-      {/* {repos.show && (
-        <Project
-          heading={repos.heading}
-          username={repos.gitHubUsername}
-          length={repos.reposLength}
-          specfic={repos.specificRepos}
-        />
       )}
-      {leadership.show && (
-        <Leadership
-          heading={leadership.heading}
-          message={leadership.message}
-          img={leadership.images}
-          imageSize={leadership.imageSize}
-        />
-      )} */}
-      {/* {skills.show && (
-        <Skills
-          heading={skills.heading}
-          hardSkills={skills.hardSkills}
-          softSkills={skills.softSkills}
-        />
-      )} */}
-      
     </>
   );
 });
