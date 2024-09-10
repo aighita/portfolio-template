@@ -37,7 +37,7 @@ const Home = React.forwardRef((props, ref) => {
           message={about.message}
           link={about.imageLink}
           imgSize={about.imageSize}
-          resume={about.resume}
+          resume={about.resume}MESAJU
         />
       )}
       {
@@ -73,6 +73,61 @@ const Home = React.forwardRef((props, ref) => {
   );
 });
 
+const MyWork = React.forwardRef((props, ref) => {
+  return (
+    <>
+      <MainBody
+        // gradient={mainBody.gradientColors2}
+        backgroundPhoto ={mainBody.imagineMyWork}
+        title={`${mainBody.firstName} ${mainBody.middleName} ${mainBody.lastName}`}
+        message={"mYwork"}
+        icons={mainBody.icons}
+        ref={ref}
+      />
+      {/* {about.show && (
+        <AboutMe
+          heading={about.heading}
+          message={about.message}
+          link={about.imageLink}
+          imgSize={about.imageSize}
+          resume={about.resume}
+        />
+      )} */}
+
+      {/* {
+        experiences.show && (
+          <Experience experiences={experiences}/>
+        )
+      } */}
+      {/* {repos.show && (
+        <Project
+          heading={repos.heading}
+          username={repos.gitHubUsername}
+          length={repos.reposLength}
+          specfic={repos.specificRepos}
+        />
+      )}
+      {leadership.show && (
+        <Leadership
+          heading={leadership.heading}
+          message={leadership.message}
+          img={leadership.images}
+          imageSize={leadership.imageSize}
+        />
+      )} */}
+      {/* {skills.show && (
+        <Skills
+          heading={skills.heading}
+          hardSkills={skills.hardSkills}
+          softSkills={skills.softSkills}
+        />
+      )} */}
+      
+    </>
+  );
+});
+
+
 const App = () => {
   const titleRef = React.useRef();
 
@@ -81,7 +136,7 @@ const App = () => {
       {navBar.show && <Navbar ref={titleRef} />}
       <Routes>
         <Route path="/" exact element={<Home ref={titleRef} />} />
-        <Route path="/projects" element={<Project ref={titleRef} />} />
+        <Route path="/projects" element={<MyWork ref={titleRef}/>} />
         <Route path="*" element={<Home />} />
       </Routes>
       {/* {false && <Route path="/blog" exact component={Blog} />}
