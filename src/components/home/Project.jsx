@@ -28,7 +28,7 @@ const Project = ({ heading, username, length, specfic, ref }) => {
       <Container className="">
         <h2 className="display-4 pb-5 text-center">{heading}</h2>
         <Row>
-          <h3>Future projects</h3>
+          {/* TODO: Add logos of brands 3-per row located inside public/brands */}
         </Row>
       </Container>
     </Jumbotron>
