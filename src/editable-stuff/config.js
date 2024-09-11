@@ -69,16 +69,15 @@ const repos = {
 const brands = {
   show: true,
   heading: "Brands that trusted me.",
-  message: "Brands that trusted me.",
+  logos: [], // Get paths to logos from localhost:5000/api/brands with method get.
 };
 
 // GET IN TOUCH SECTION
 const getInTouch = {
   show: true,
   heading: "Get In Touch",
-  message:
-    "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-  email: "hashirshoaeb@gmail.com",
+  message: "I am open to collaborations. Feel free to contact me regarding photosoots/campaigns/music videos.",
+  email: "nedal@nedmedia.com",
 };
 
-export { navBar, mainBody, about, repos, getInTouch };
+export { navBar, mainBody, about, repos, getInTouch, brands };

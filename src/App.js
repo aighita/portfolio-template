@@ -1,54 +1,29 @@
 import React from "react";
+
+// Routing multiple pages. Each path to page
+// "/" => Home.jsx
+// "/mywork" => MyWork.jsx
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+// Configuration variables
 import {
   navBar,
   mainBody,
-  about,
-  repos,
   getInTouch,
 } from "./editable-stuff/config.js";
 
+// Navigation
 import Navbar from "./components/Navbar";
 
+// PAGES
+import Home from "./pages/Home.jsx"
+
+// Other components
 import MainBody from "./components/home/MainBody";
-import AboutMe from "./components/home/AboutMe";
-import Project from "./components/home/Project";
 import GetInTouch from "./components/home/GetInTouch.jsx";
 
+// Footer
 import Footer from "./components/Footer";
-
-// import Home from "./pages/Home.jsx"
-
-const Home = React.forwardRef((props, ref) => {
-  return (
-    <>
-      <MainBody
-        gradient={mainBody.gradientColors}
-        title={`${mainBody.firstName} ${mainBody.middleName} ${mainBody.lastName}`}
-        message={mainBody.message}
-        icons={mainBody.icons}
-        ref={ref}
-      />
-      {about.show && (
-        <AboutMe
-          heading={about.heading}
-          message={about.message}
-          link={about.imageLink}
-          imgSize={about.imageSize}
-          resume={about.resume}MESAJU
-        />
-      )}
-      {repos.show && (
-        <Project
-          heading={repos.heading}
-          username={repos.gitHubUsername}
-          length={repos.reposLength}
-          specfic={repos.specificRepos}
-        />
-      )}
-    </>
-  );
-});
 
 const MyWork = React.forwardRef((props, ref) => {
   return (
