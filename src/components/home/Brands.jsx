@@ -31,7 +31,9 @@ const Brands = ({ heading }) => {
         <Row className="justify-content-center">
           {/* If logos array is empty, display a message */}
           {logos.length === 0 ? (
-            <p style={{ textAlign: "center" }}>No logos to display. Folder is empty. Try adding at least one ".png" file.</p>
+            <p style={{ textAlign: "center" }}>No logos to display... <br></br> 
+                                            Folder empty or back-end server down <br></br>
+                                            </p>
           ) : (
             // Map through the logos and display them in 3-per-row format
             logos.map((logo, index) => (

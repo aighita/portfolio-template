@@ -4,15 +4,17 @@ import React from "react";
 import MainBody from '../components/home/MainBody.jsx'
 import AboutMe from "../components/home/AboutMe.jsx";
 import Brands from "../components/home/Brands.jsx";
+import Contact from "../components/home/Contact.jsx"
 
 // Configuration variables
 import {
     mainBody,
     about,
-    brands
+    brands,
+    contact
   } from '../editable-stuff/config.js'
 
-  const Home = React.forwardRef((props, ref) => {
+const Home = React.forwardRef((props, ref) => {
     return (
       <>
         {/* Main body / Hero Section */}
@@ -40,9 +42,15 @@ import {
             // logos={brands.logos}
           />
         )}
+        {contact.show && (
+          <Contact
+            heading={brands.heading}
+            // logos={brands.logos}
+          />
+        )}
       </>
     );
-  });
+});
 
 // Exporting the home page
 export default Home;

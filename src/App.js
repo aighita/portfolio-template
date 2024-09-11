@@ -18,6 +18,7 @@ import Navbar from "./components/Navbar.jsx";
 // PAGES
 import Home from "./pages/Home.jsx"
 import MyWork from "./pages/MyWork.jsx";
+import MusicVideos from "./pages/MusicVideos.jsx";
 
 // Other components
 import GetInTouch from "./components/home/GetInTouch.jsx";
@@ -35,6 +36,7 @@ const App = () => {
       <Routes>
         <Route path="/" exact element={<Home ref={titleRef} />} />
         <Route path="/my-work" element={<MyWork ref={titleRef}/>} />
+        <Route path="/music-videos" element={<MusicVideos ref={titleRef}/>} />
         <Route path="*" element={<Home />} />
       </Routes>
       {/* {false && <Route path="/blog" exact component={Blog} />}

@@ -48,7 +48,7 @@ const about = {
   show: true,
   heading: "Razvan Nedal",
   imageLink: require("../editable-stuff/profile.jpeg"),
-  imageSize: 375,
+  imageSize: 250,
   message: "Freelance Videographer & Photographer at Ned Media Network",
   resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
 };
@@ -66,9 +66,10 @@ const repos = {
   specificRepos: [],
 };
 
+// BRANDS SECTION
 const brands = {
   show: true,
-  heading: "Brands that trusted me.",
+  heading: "Brands that trusted me",
   logos: [], // Get paths to logos from localhost:5000/api/brands with method get.
 };
 
@@ -76,8 +77,26 @@ const brands = {
 const getInTouch = {
   show: true,
   heading: "Get In Touch",
-  message: "I am open to collaborations. Feel free to contact me regarding photosoots/campaigns/music videos.",
+  message: "I am open to collaborations. Feel free to contact me regarding photosoots/campaigns/music videos: ",
   email: "nedal@nedmedia.com",
 };
 
-export { navBar, mainBody, about, repos, getInTouch, brands };
+const contact = {
+  show: true,
+  heading: "Contact",
+  message: "Complete the form below",
+}
+
+const musicVideos = {
+  show: true,
+  heading: "Music Videos",
+  message: "",
+}
+
+const myWork = {
+  show: true,
+  heading: "MY WORK",
+  message: "",
+}
+
+export { navBar, mainBody, about, repos, getInTouch, brands, contact, musicVideos, myWork };
