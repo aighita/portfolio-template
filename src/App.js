@@ -18,6 +18,8 @@ import Navbar from "./components/Navbar.jsx";
 // PAGES
 import Home from "./pages/Home.jsx"
 import MyWork from "./pages/MyWork.jsx";
+import Gallery from "./pages/Gallery.jsx";
+import Campaigns from "./pages/Campaigns.jsx";
 import MusicVideos from "./pages/MusicVideos.jsx";
 
 // Other components
@@ -36,6 +38,8 @@ const App = () => {
       <Routes>
         <Route path="/" exact element={<Home ref={titleRef} />} />
         <Route path="/my-work" element={<MyWork ref={titleRef}/>} />
+        <Route path="/gallery" element={<Gallery ref={titleRef}/>} />
+        <Route path="/campaigns" element={<Campaigns ref={titleRef}/>} />
         <Route path="/music-videos" element={<MusicVideos ref={titleRef}/>} />
         <Route path="*" element={<Home />} />
       </Routes>

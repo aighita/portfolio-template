@@ -1,29 +1,29 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <h1 align="center">Developer's Portfolio ✨</h1>
+  <h1 align="center">Photography Portfolio ✨</h1>
 
   <p align="center">
-    It is a personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects. 
+    It is a static website/portfolio template for photographers
     <br/>
-    <strong>Site URL / Demo » </strong> 
-    <a href="https://hashirshoaeb.github.io/home">hashirshoaeb.github.io/home</a>
+    <!-- <strong>Site URL / Demo » </strong> 
+    <a href="https://github.com/aighita">aighita</a> -->
+    <!-- <br />
     <br />
-    <br />
-    <a href="https://hashirshoaeb.github.io">About Me</a>
+    <a href="https://hashirshoaeb.github.io">About Me</a> -->
   </p>
 </p>
 
-![GitHub contributors](https://img.shields.io/github/contributors/hashirshoaeb/home?color=ffcc66&style=for-the-badge)
+<!-- ![GitHub contributors](https://img.shields.io/github/contributors/hashirshoaeb/home?color=ffcc66&style=for-the-badge)
 ![GitHub stars](https://img.shields.io/github/stars/hashirshoaeb/home?color=ffcc66&style=for-the-badge)
 [![GitHub forks](https://img.shields.io/github/forks/hashirshoaeb/home?style=for-the-badge)](https://github.com/hashirshoaeb/star_book/network)
 [![GitHub issues](https://img.shields.io/github/issues/hashirshoaeb/home?color=ffcc66&style=for-the-badge)](https://github.com/hashirshoaeb/star_book/issues)
 [![GitHub license](https://img.shields.io/github/license/hashirshoaeb/home?style=for-the-badge)](https://github.com/hashirshoaeb/home/blob/master/LICENSE)
 [![Twitter Follow](https://img.shields.io/twitter/follow/hashirshoaeb?color=ffcc66&logo=twitter&logoColor=ffffff&style=for-the-badge)](https://twitter.com/hashirshoaeb)
 [![Node Version](https://img.shields.io/static/v1?label=Node&message=^20.10.0&color=026e00&style=for-the-badge)](https://nodejs.org)
-[![npm Version](https://img.shields.io/static/v1?label=npm&message=^10.2.3&color=cb0000&style=for-the-badge)](https://nodejs.org)
+[![npm Version](https://img.shields.io/static/v1?label=npm&message=^10.2.3&color=cb0000&style=for-the-badge)](https://nodejs.org) -->
 
-<!-- TABLE OF CONTENTS -->
+TABLE OF CONTENTS
 <details>
   <summary>Table of Contents</summary>
   <ol>

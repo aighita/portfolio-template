@@ -93,10 +93,22 @@ const musicVideos = {
   message: "",
 }
 
+const gallery = {
+  show: true,
+  heading: "GALLERY",
+  message: "",
+}
+
+const campaigns = {
+  show: true,
+  heading: "CAMPAIGNS",
+  message: "",
+}
+
 const myWork = {
   show: true,
   heading: "MY WORK",
   message: "",
 }
 
-export { navBar, mainBody, about, repos, getInTouch, brands, contact, musicVideos, myWork };
+export { navBar, mainBody, about, repos, getInTouch, brands, contact, musicVideos, gallery, campaigns, myWork };

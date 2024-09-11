@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap'; // Ensure you're using Bootstrap
 import { Jumbotron } from './migration';
 
-const Content = ({ heading }) => {
+const Content = () => {
   const [youtubeLinks, setYoutubeLinks] = useState([]); // Initialize as an empty array
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const Content = ({ heading }) => {
   return (
     <Jumbotron fluid id="projects" className="bg-light m-0">
       <Container>
-        <h2 className="display-4 pb-5 text-center">{heading}</h2>
+        {/* <h2 className="display-4 pb-5 text-center">{heading}</h2> */}
         <Row className="justify-content-center">
           {/* Map through YouTube links and display two embedded videos per row */}
           {youtubeLinks.length > 0 ? (
