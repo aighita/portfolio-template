@@ -37,7 +37,7 @@ import {
         {brands.show && (
           <Brands 
             heading={brands.heading}
-            logos={brands.logos}
+            // logos={brands.logos}
           />
         )}
       </>

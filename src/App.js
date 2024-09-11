@@ -13,34 +13,17 @@ import {
 } from "./editable-stuff/config.js";
 
 // Navigation
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar.jsx";
 
 // PAGES
 import Home from "./pages/Home.jsx"
+import MyWork from "./pages/MyWork.jsx";
 
 // Other components
-import MainBody from "./components/home/MainBody";
 import GetInTouch from "./components/home/GetInTouch.jsx";
 
 // Footer
-import Footer from "./components/Footer";
-
-const MyWork = React.forwardRef((props, ref) => {
-  return (
-    <>
-      {mainBody.show && (
-        <MainBody
-        // gradient={mainBody.gradientColors2}
-        backgroundPhoto ={mainBody.imagineMyWork}
-        title={`${mainBody.firstName} ${mainBody.middleName} ${mainBody.lastName}`}
-        message={"mYwork"}
-        icons={mainBody.icons}
-        ref={ref}
-      />
-      )}
-    </>
-  );
-});
+import Footer from "./components/Footer.jsx";
 
 
 const App = () => {
@@ -51,7 +34,7 @@ const App = () => {
       {navBar.show && <Navbar ref={titleRef} />}
       <Routes>
         <Route path="/" exact element={<Home ref={titleRef} />} />
-        <Route path="/projects" element={<MyWork ref={titleRef}/>} />
+        <Route path="/my-work" element={<MyWork ref={titleRef}/>} />
         <Route path="*" element={<Home />} />
       </Routes>
       {/* {false && <Route path="/blog" exact component={Blog} />}

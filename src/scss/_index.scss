@@ -57,6 +57,13 @@ code {
   right: 0;
 }
 
+/* Ensure logos maintain their aspect ratio and do not stretch */
+.logo-image {
+  max-width: 150px;  /* Adjust the size as needed */
+  height: auto;      /* Maintain aspect ratio */
+  object-fit: contain; /* Prevent stretching */
+}
+
 .brand {
   color: #363636 !important;
 }
