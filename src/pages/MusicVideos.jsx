@@ -7,6 +7,7 @@ import Brands from "../components/home/Brands.jsx";
 
 // Configuration variables
 import { mainBody, musicVideos }  from "../editable-stuff/config.js"
+import Content from '../components/home/Content.jsx';
 
 const MusicVideos = React.forwardRef((props, ref) => {
     return (
@@ -22,7 +23,8 @@ const MusicVideos = React.forwardRef((props, ref) => {
         />
         )}
         {true && (
-          <Brands 
+          <Content
+            heading={"Videos"}
           />
         )}
       </>
