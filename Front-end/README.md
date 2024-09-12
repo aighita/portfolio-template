@@ -23,7 +23,7 @@
 [![Node Version](https://img.shields.io/static/v1?label=Node&message=^20.10.0&color=026e00&style=for-the-badge)](https://nodejs.org)
 [![npm Version](https://img.shields.io/static/v1?label=npm&message=^10.2.3&color=cb0000&style=for-the-badge)](https://nodejs.org) -->
 
-<!-- TABLE OF CONTENTS
+TABLE OF CONTENTS
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -247,4 +247,4 @@ This project has been **archived**. Means that it is no longer actively maintain
 
 # Stargazers over time
 
-[![Stargazers over time](https://starchart.cc/hashirshoaeb/home.svg)](https://starchart.cc/hashirshoaeb/home) -->
+[![Stargazers over time](https://starchart.cc/hashirshoaeb/home.svg)](https://starchart.cc/hashirshoaeb/home)
