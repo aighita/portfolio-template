@@ -94,10 +94,27 @@ const musicVideos = {
 }
 
 const gallery = {
-  show: true,
-  heading: "GALLERY",
-  message: "",
-}
+  show: true, 
+  heading: 'My Gallery',
+  message: 'Welcome to my work showcase.',
+  leftImage: [
+    '../gallery/leftImage/beautiful-pictures-of-nature-hd-1920x1080-wallpaper-preview.jpg',
+    '../gallery/leftImage/26db8e1bc9a0eb238e69ae7d01a24fee.jpg',
+    '../gallery/leftImage/stock-photo-a-very-random-pose-of-asian-men-wearing-blue-t-shirts-on-a-gray-background-random-theme-2423213779.jpg',
+
+  ],
+    topRightImage: [
+      '../gallery/topRightImage/poza1.jpg',
+      '../gallery/topRightImage/poza2.jpg',
+      '../gallery/topRightImage/poza3.jpeg',
+    ],
+  bottomRightImage: [
+    '../gallery/bottomRightImage/picture1.jpg',
+    '../gallery/bottomRightImage/picture2.jpg',
+    '../gallery/bottomRightImage/picture3.jpg',
+  ],
+
+};
 
 const campaigns = {
   show: true,

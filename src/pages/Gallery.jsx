@@ -1,30 +1,30 @@
 import React from 'react'
 
 // Components
-import MainBody from '../components/home/MainBody.jsx'
+import GalleryBody from '../components/home/GalleryBody.jsx'
+import GalleryContent from '../components/home/GalleryContent.jsx';
 
 // Configuration variables
-import { mainBody, gallery }  from "../editable-stuff/config.js"
-import Content from '../components/home/Content.jsx';
+import { gallery }  from "../editable-stuff/config.js"
 
 const Gallery = React.forwardRef((props, ref) => {
-    return (
-        <>
-        {gallery.show && (
-          <MainBody
-          gradient={mainBody.gradientColors2}
-        //   backgroundPhoto ={mainBody.imagineMyWork}
-          title={gallery.heading}
-          message={gallery.message}
-          icons={mainBody.icons}
-          ref={ref}
-        />
-        )}
-        {true && (
-          <Content />
-        )}
-      </>
-    );
+
+  return (
+    <>
+      {gallery.show && (
+        <GalleryBody
+          leftImage={gallery.leftImage}
+          topRightImage={gallery.topRightImage}
+          bottomRightImage={gallery.bottomRightImage}
+          
+        >
+          
+        </GalleryBody>
+      )}
+      {/* Content Section */}
+      {true && <GalleryContent />}
+    </>
+  );
 });
 
 export default Gallery;
