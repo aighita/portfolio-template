@@ -75,7 +75,7 @@ const brands = {
 
 // GET IN TOUCH SECTION
 const getInTouch = {
-  show: true,
+  show: false,
   heading: "Get In Touch",
   message: "I am open to collaborations. Feel free to contact me regarding photosoots/campaigns/music videos: ",
   email: "nedal@nedmedia.com",

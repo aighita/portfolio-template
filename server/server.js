@@ -106,7 +106,7 @@ const server = http.createServer((req, res) => {
 
     // BRANDS
     } else if (req.url === '/api/brands' && req.method === 'GET') {
-        const campaignsDir = path.join(__dirname, '../portfolio-template/public/brands/');
+        const campaignsDir = path.join(__dirname, '../public/brands/');
 
         fs.readdir(campaignsDir, { withFileTypes: true }, (err, files) => {
             if (err) {

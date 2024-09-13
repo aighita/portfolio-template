@@ -2,7 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 
 const Footer = (props) => {
-  const bgStyle = { backgroundColor: "#f5f5f5" };
+  const bgStyle = { backgroundColor: "#0b0322" };
 
   return (
     <footer style={bgStyle} className="mt-auto py-5 text-center ">
@@ -11,19 +11,20 @@ const Footer = (props) => {
         <i className="fas fa-code" /> with <i className="fas fa-heart" /> by{" "}
         <a
           rel="noopener"
-          href="https://github.com/hashirshoaeb"
+          href="https://github.com/aighita"
           aria-label="My GitHub"
         > <span className="badge bg-dark">
-            Hashir Shoaib
+            Iulian Ghita
           </span>
-        </a>{" "}
-        using <i className="fab fa-react" />
-        <p>
-          <small className="text-muted">
-            Project code is open source. Feel free to fork and make your own
-            version.
-          </small>
-        </p>
+        </a>{" & "}
+        <a
+          rel="noopener"
+          href="https://github.com/baldvoicu"
+          aria-label="My GitHub"
+        > <span className="badge bg-dark">
+            Vlad Voicu
+          </span>
+        </a>
       </Container>
     </footer>
   );

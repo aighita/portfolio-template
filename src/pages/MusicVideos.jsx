@@ -8,18 +8,14 @@ import Brands from "../components/home/Brands.jsx";
 // Configuration variables
 import { mainBody, musicVideos }  from "../editable-stuff/config.js"
 import Content from '../components/home/Content.jsx';
+import MusicVideosBody from '../components/home/MusicVideosBody.jsx';
 
 const MusicVideos = React.forwardRef((props, ref) => {
     return (
         <>
         {musicVideos.show && (
-          <MainBody
-          gradient={mainBody.gradientColors2}
-        //   backgroundPhoto ={mainBody.imagineMyWork}
-          title={musicVideos.heading}
-          message={musicVideos.message}
-          icons={mainBody.icons}
-          ref={ref}
+          <MusicVideosBody
+            ref={ref}
         />
         )}
         {true && (
