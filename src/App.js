@@ -8,8 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // Configuration variables
 import {
   navBar,
-  mainBody,
-  getInTouch,
+  footer
 } from "./editable-stuff/config.js";
 
 // Navigation
@@ -21,9 +20,8 @@ import MyWork from "./pages/MyWork.jsx";
 import Gallery from "./pages/Gallery.jsx";
 import Campaigns from "./pages/Campaigns.jsx";
 import MusicVideos from "./pages/MusicVideos.jsx";
-
-// Other components
-import GetInTouch from "./components/home/GetInTouch.jsx";
+// import Photoshoot from "./pages/Photoshoot.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 // Footer
 import Footer from "./components/Footer.jsx";
@@ -34,26 +32,19 @@ const App = () => {
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>
-      {navBar.show && <Navbar ref={titleRef} />}
+      {navBar.show && <Navbar ref={titleRef} />}                                  {/* NAVIGATION BAR */}
+
+      {/* URL PAGE ROUTING */}
       <Routes>
-        <Route path="/" exact element={<Home ref={titleRef} />} />
-        <Route path="/my-work" element={<MyWork ref={titleRef}/>} />
-        <Route path="/gallery" element={<Gallery ref={titleRef}/>} />
-        <Route path="/campaigns" element={<Campaigns ref={titleRef}/>} />
-        <Route path="/music-videos" element={<MusicVideos ref={titleRef}/>} />
-        <Route path="*" element={<Home />} />
+        <Route path="/" exact element={<Home ref={titleRef} />} />                {/* HOME           */}
+        <Route path="/my-work" element={<MyWork ref={titleRef}/>} />              {/* MY WORK        */}
+        <Route path="/gallery" element={<Gallery ref={titleRef}/>} />             {/* GALLERY        */}
+        <Route path="/campaigns" element={<Campaigns ref={titleRef}/>} />         {/* CAMPAIGNS      */}
+        <Route path="/music-videos" element={<MusicVideos ref={titleRef}/>} />    {/* MUSIC VIDEOS   */}
+        <Route path="*" element={<NotFound />} />                                     {/* 404 PAGES      */}
       </Routes>
-      {/* {false && <Route path="/blog" exact component={Blog} />}
-      {false && <Route path="/blog/:id" component={BlogPost} />} */}
-      <Footer>
-        {getInTouch.show && (
-          <GetInTouch
-            heading={getInTouch.heading}
-            message={getInTouch.message}
-            email={getInTouch.email}
-          />
-        )}
-      </Footer>
+  
+      {footer.show && <Footer/>}                                                  {/* FOOTER         */}
     </BrowserRouter>
   );
 };

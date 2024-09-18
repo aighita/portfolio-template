@@ -1,9 +1,6 @@
 import React from 'react'
 
 // Components
-import MainBody from '../components/home/MainBody.jsx'
-import AboutMe from "../components/home/AboutMe.jsx";
-import Brands from "../components/home/Brands.jsx";
 
 // Configuration variables
 import { mainBody, musicVideos }  from "../editable-stuff/config.js"

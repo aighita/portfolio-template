@@ -2,28 +2,31 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 
 const Footer = (props) => {
-  const bgStyle = { backgroundColor: "#0b0322" };
+  const bgStyle = { backgroundColor: "black", color: "white" };
+
+  const linkStyle = { textDecoration: "none", color: "inherit" };
 
   return (
-    <footer style={bgStyle} className="mt-auto py-5 text-center ">
+    <footer style={bgStyle} className="mt-auto py-5 text-center">
       <Container>
         {props.children}
-        <i className="fas fa-code" /> with <i className="fas fa-heart" /> by{" "}
+        Powered by
         <a
           rel="noopener"
           href="https://github.com/aighita"
-          aria-label="My GitHub"
-        > <span className="badge bg-dark">
-            Iulian Ghita
-          </span>
-        </a>{" & "}
+          aria-label="Github Profile"
+          style={linkStyle}
+        >
+          <span className="badge bg-dark">Iulian Ghita</span>
+        </a>{" "}
+        &{" "}
         <a
           rel="noopener"
           href="https://github.com/baldvoicu"
-          aria-label="My GitHub"
-        > <span className="badge bg-dark">
-            Vlad Voicu
-          </span>
+          aria-label="Github Profilee"
+          style={linkStyle}
+        >
+          <span className="badge bg-dark">Vlad Voicu</span>
         </a>
       </Container>
     </footer>

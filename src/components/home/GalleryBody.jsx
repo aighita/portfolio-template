@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Container from "react-bootstrap/Container";
+import Typist from 'react-typist-component';
 
 const getRandomInterval = () => {
-  return Math.floor(Math.random() * (5000 - 1000 + 1)) + 1000; // Random number between 1000ms (1s) and 5000ms (5s)
+  return Math.floor(Math.random() * (10000 - 1000 + 1)) + 5000; // Random number between 1000ms (1s) and 5000ms (5s)
 };
 
 const GalleryBody = React.forwardRef(
@@ -57,6 +58,7 @@ const GalleryBody = React.forwardRef(
       opacity: 0,
     };
 
+    // Updated text overlay style for "GALLERY" div
     const textOverlayStyle = {
       position: "absolute",
       top: "50%",
@@ -65,11 +67,13 @@ const GalleryBody = React.forwardRef(
       zIndex: 2, // Ensure the text is on top of the images
       color: "white",
       textAlign: "center",
-      fontSize: "10rem",
-      fontWeight: "bold",
-      opacity: 0.6, // Almost transparent text
-      mixBlendMode: "exclusion", // Special outline effect
-      textShadow: `0px 0px 15px rgba(0, 0, 0, 0.9)`, // Create a strong outline glow effect
+      fontSize: "34vw", // Smaller font size
+      // fontWeight: "bold", // Bold text
+      // backgroundColor: 'rgba(0, 0, 0, 1)', // Fully dark background
+      padding: '20px', // Add padding to the background box
+      opacity: 0.8, // Full opacity
+      textShadow: `0px 0px 15px rgba(0, 0, 0, 0.1)`, // Outline glow effect for the text
+      borderRadius: '10px', // Rounded corners for the background box
     };
 
     return (
@@ -84,9 +88,11 @@ const GalleryBody = React.forwardRef(
         className="bgstyle text-light m-0"
       >
         {/* Overlay Text */}
-        <div style={textOverlayStyle}>
+        {/* <Typist> */}
+        <h1 ref={ref} style={textOverlayStyle} className='roboto-mono-title'>
           GALLERY
-        </div>
+        </h1>
+        {/* </Typist> */}
 
         <div
           style={{

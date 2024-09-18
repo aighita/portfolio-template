@@ -3,6 +3,11 @@ const navBar = {
   show: true,
 };
 
+// Footer SECTION
+const footer = {
+  show: true,
+};
+
 // Main Body SECTION
 const mainBody = {
   show: true,
@@ -10,9 +15,9 @@ const mainBody = {
   gradientColors2: "#4584ce, #1ad9c0, #ff3b11, #5b59b6, #ff2f7f, #ecf4f1",
   // Image to display as background. If image not found display gradient colors.
   imagineMyWork: "beautiful-pictures-of-nature-hd-1920x1080-wallpaper-preview.jpg",
-  firstName: "Razvan",
+  firstName: "RAZVAN",
   middleName: "",
-  lastName: "Nedal",
+  lastName: "NEDAL",
   message: " Storytelling through every shot. ",
   icons: [
     {
@@ -47,7 +52,7 @@ const mainBody = {
 const about = {
   show: true,
   heading: "Razvan Nedal",
-  imageLink: require("../editable-stuff/profile.jpeg"),
+  imageLink: require("./profile.jpeg"),
   imageSize: 250,
   message: "Freelance Videographer & Photographer at Ned Media Network",
   resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
@@ -98,15 +103,15 @@ const gallery = {
   heading: 'My Gallery',
   message: 'Welcome to my work showcase.',
   leftImage: [
-    '../gallery/leftImage/beautiful-pictures-of-nature-hd-1920x1080-wallpaper-preview.jpg',
-    '../gallery/leftImage/26db8e1bc9a0eb238e69ae7d01a24fee.jpg',
-    '../gallery/leftImage/stock-photo-a-very-random-pose-of-asian-men-wearing-blue-t-shirts-on-a-gray-background-random-theme-2423213779.jpg',
+    '../gallery/leftImage/poza1.jpg',
+    '../gallery/leftImage/poza2.jpg',
+    '../gallery/leftImage/poza3.jpg',
 
   ],
     topRightImage: [
       '../gallery/topRightImage/poza1.jpg',
       '../gallery/topRightImage/poza2.jpg',
-      '../gallery/topRightImage/poza3.jpeg',
+      '../gallery/topRightImage/poza3.jpg',
     ],
   bottomRightImage: [
     '../gallery/bottomRightImage/picture1.jpg',
@@ -128,4 +133,11 @@ const myWork = {
   message: "",
 }
 
-export { navBar, mainBody, about, repos, getInTouch, brands, contact, musicVideos, gallery, campaigns, myWork };
+const notFound = {
+  show: true,
+  heading: "404 ERROR - NOT FOUND",
+  message: "Sorry.. We can't find the page you're looking for.",
+  buttonText: "GO BACK"
+}
+
+export { navBar, mainBody, about, repos, getInTouch, brands, contact, musicVideos, gallery, campaigns, myWork, footer, notFound };

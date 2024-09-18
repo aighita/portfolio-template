@@ -16,13 +16,12 @@ const Gallery = React.forwardRef((props, ref) => {
           leftImage={gallery.leftImage}
           topRightImage={gallery.topRightImage}
           bottomRightImage={gallery.bottomRightImage}
-          
+          ref={ref}
         >
-          
         </GalleryBody>
       )}
       {/* Content Section */}
-      {true && <GalleryContent />}
+      {gallery.show && <GalleryContent />}
     </>
   );
 });

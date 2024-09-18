@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { useScrollPosition } from "../hooks/useScrollPosition";
-import useResizeObserver from "../hooks/useResizeObserver";
+import { useScrollPosition } from "../hooks/useScrollPosition.js";
+import useResizeObserver from "../hooks/useResizeObserver.js";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { mainBody, repos, about, skills, musicVideos, gallery } from "../editable-stuff/config.js";
-import { NavLink } from "./home/migration";
+import { NavLink } from "./home/migration.jsx";
 
 const Navigation = React.forwardRef((props, ref) => {
   const [isTop, setIsTop] = useState(true);
@@ -46,7 +46,7 @@ const Navigation = React.forwardRef((props, ref) => {
       {/* <Navbar.Brand className="navbar-brand" href={process.env.PUBLIC_URL + "/#home"}>
         {`| Nedal |`}
       </Navbar.Brand> */}
- 
+
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler" />
 
       {/* DIFFERENT PAGES ROUTING */}
@@ -87,6 +87,20 @@ const Navigation = React.forwardRef((props, ref) => {
           )}
         </Nav>
       </Navbar.Collapse>
+
+      <div className="ms-auto">
+      {mainBody.icons.map((icon, index) => (
+              <a
+                key={`social-icon-${index}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                href={icon.url}
+                aria-label={`My ${icon.image.split("-")[1]}`}
+              >
+                <i className={`fab ${icon.image}  fa-2x socialicons`} />
+              </a>
+      ))}
+      </div>
 
     </Navbar>
   );

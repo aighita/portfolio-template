@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap'; // Ensure you're using Bootstrap
-import { Jumbotron } from './migration';
+import { Jumbotron } from './migration.jsx';
 import PhotoshootCard from './PhotoshootCard.jsx';
 
 const GalleryContent = () => {
@@ -33,7 +33,11 @@ const GalleryContent = () => {
   const folderNames = Object.keys(galleryData);
 
   return (
-    <Jumbotron fluid id="projects" className="bg-light m-0">
+    <Jumbotron fluid id="projects" className="custom-bg-dark"
+      style={{
+        background: 'rgba(34, 34, 34)',
+      }}
+    >
       <Container>
         <Row className="justify-content-center">
           {/* Map through folder names and display a PhotoshootCard for each folder */}
