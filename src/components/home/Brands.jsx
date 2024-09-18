@@ -26,9 +26,9 @@ const Brands = ({ heading }) => {
   }, []);  // Empty dependency array ensures the fetch runs once when the component mounts
 
   return (
-    <Jumbotron fluid id="projects" className="bg-light m-0">
+    <Jumbotron fluid id="projects" className="bg-black m-0">
       <Container>
-        <h2 className="display-4 pb-5 text-center">{heading}</h2>
+        <h2 className="display-4 pb-5 text-center text-white">{heading}</h2>
         <Row className="justify-content-center">
           {/* If logos array is empty, display a message */}
           {logos.length === 0 ? (

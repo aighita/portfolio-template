@@ -41,7 +41,7 @@ const App = () => {
         <Route path="/gallery" element={<Gallery ref={titleRef}/>} />             {/* GALLERY        */}
         <Route path="/campaigns" element={<Campaigns ref={titleRef}/>} />         {/* CAMPAIGNS      */}
         <Route path="/music-videos" element={<MusicVideos ref={titleRef}/>} />    {/* MUSIC VIDEOS   */}
-        <Route path="*" element={<NotFound />} />                                     {/* 404 PAGES      */}
+        <Route path="*" element={<NotFound />} />                                 {/* 404 PAGES      */}
       </Routes>
   
       {footer.show && <Footer/>}                                                  {/* FOOTER         */}

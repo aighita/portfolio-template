@@ -204,6 +204,20 @@ code {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+// ABOUT ME BACKGROUND
+.jumbotron-custom {
+  background-color: rgba(0, 0, 0, 0.9) !important; /* Ensure background is set with high specificity */
+  border: 10px solid black;
+  border-radius: 0px !important; /* Remove border-radius */
+  padding: 20px; /* Optional padding */
+}
+
+// ABOUT ME IMG
+.border-black {
+  border: 5px solid black !important;
+  // border-radius: 20px !important;
+}
+
 // GALLERY - PHOTOSHOOT CARD
 .photoshoot-card-container {
   position: relative;

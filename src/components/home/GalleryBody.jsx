@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Container from "react-bootstrap/Container";
-import Typist from 'react-typist-component';
 
 const getRandomInterval = () => {
   return Math.floor(Math.random() * (10000 - 1000 + 1)) + 5000; // Random number between 1000ms (1s) and 5000ms (5s)
@@ -67,61 +66,66 @@ const GalleryBody = React.forwardRef(
       zIndex: 2, // Ensure the text is on top of the images
       color: "white",
       textAlign: "center",
-      fontSize: "34vw", // Smaller font size
-      // fontWeight: "bold", // Bold text
-      // backgroundColor: 'rgba(0, 0, 0, 1)', // Fully dark background
-      padding: '20px', // Add padding to the background box
-      opacity: 0.8, // Full opacity
+      fontSize: "35vw", // Size for "GALLERY" text
+      padding: '20px',
+      opacity: 1,
       textShadow: `0px 0px 15px rgba(0, 0, 0, 0.1)`, // Outline glow effect for the text
-      borderRadius: '10px', // Rounded corners for the background box
+    };
+
+    const imageContainerStyle = {
+      flex: 1,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      // border: "5px solid black", // Added black border
+      ...fadeStyle,
+    };
+
+    const containerStyle = {
+      position: "relative", // Set relative position for containing absolutely positioned text
+      display: "flex",
+      height: "100vh",
+      gap: "10px", // Added spacing between the images
+      backgroundColor: 'rgba(0, 0, 0, 1)',
+      padding: "10px", // Padding around the entire container
     };
 
     return (
       <div
         id="home"
-        style={{
-          position: "relative", // Set relative position for containing absolutely positioned text
-          display: "flex",
-          height: "100vh",
-          backgroundColor: 'rgba(0, 0, 0, 0.9)',
-        }}
+        style={containerStyle}
         className="bgstyle text-light m-0"
       >
         {/* Overlay Text */}
-        {/* <Typist> */}
         <h1 ref={ref} style={textOverlayStyle} className='roboto-mono-title'>
           GALLERY
         </h1>
-        {/* </Typist> */}
 
+        {/* Left Image */}
         <div
           style={{
-            flex: 1,
-            background: `url(${leftImage[leftImageIndex]}) center/cover no-repeat`,
-            backgroundSize: "cover",
-            ...fadeStyle,
-            ...(leftImageVisible ? {} : hiddenStyle),
+            ...imageContainerStyle,
+            backgroundImage: `url(${leftImage[leftImageIndex]})`,
+            ...(!leftImageVisible && hiddenStyle), // Handle fade out
           }}
         ></div>
 
-        <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+        {/* Right Column Images */}
+        <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: "10px" }}>
+          {/* Top Right Image */}
           <div
             style={{
-              flex: 1,
-              background: `url(${topRightImage[topRightImageIndex]}) center/cover no-repeat`,
-              backgroundSize: "cover",
-              ...fadeStyle,
-              ...(topRightImageVisible ? {} : hiddenStyle),
+              ...imageContainerStyle,
+              backgroundImage: `url(${topRightImage[topRightImageIndex]})`,
+              ...(!topRightImageVisible && hiddenStyle), // Handle fade out
             }}
           ></div>
 
+          {/* Bottom Right Image */}
           <div
             style={{
-              flex: 1,
-              background: `url(${bottomRightImage[bottomRightImageIndex]}) center/cover no-repeat`,
-              backgroundSize: "cover",
-              ...fadeStyle,
-              ...(bottomRightImageVisible ? {} : hiddenStyle),
+              ...imageContainerStyle,
+              backgroundImage: `url(${bottomRightImage[bottomRightImageIndex]})`,
+              ...(!bottomRightImageVisible && hiddenStyle), // Handle fade out
             }}
           ></div>
         </div>
