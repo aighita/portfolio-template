@@ -1,32 +1,31 @@
 import React from "react";
 
 // Components of the page
-import MainBody from '../components/home/MainBody.jsx'
-// import AboutMe from "../components/home/AboutMe.jsx";
-// import Brands from "../components/home/Brands.jsx";
+import MyWorkBody from '../components/home/MyWorkBody.jsx'; // Import MyWorkBody
+
 
 // Configuration variables
 import {
-    mainBody,
-    myWork
-} from '../editable-stuff/config.js'
+    myWork // Ensure you are importing the right config for MyWorkBody
+} from '../editable-stuff/config.js';
 
 const MyWork = React.forwardRef((props, ref) => {
     return (
       <>
-        {mainBody.show && (
-          <MainBody
-          // gradient={mainBody.gradientColors2}
-          backgroundPhoto ={mainBody.imagineMyWork}
-          title={myWork.heading}
-          message={"MY WORK"}
-          icons={mainBody.icons}
-          ref={ref}
-        />
+        {myWork.show && ( // Assuming myWork controls visibility now
+          <MyWorkBody
+          style={{
+            width: "100%"
+          }}
+            // Pass in necessary props to MyWorkBody, modify as needed
+            backgroundPhoto={myWork.backgroundPhoto} // Assuming there's a background photo for MyWork
+            icons={myWork.icons}  // Pass icons if relevant
+            ref={ref}
+          />
         )}
       </>
     );
 });
 
-// Exporting the home page
+// Exporting the MyWork page
 export default MyWork;

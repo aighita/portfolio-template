@@ -57,27 +57,20 @@ const GalleryBody = React.forwardRef(
       opacity: 0,
     };
 
-    // Updated text overlay style for "GALLERY" div
-    const textOverlayStyle = {
-      position: "absolute",
-      top: "50%",
-      left: "50%",
-      transform: "translate(-50%, -50%)",
-      zIndex: 2, // Ensure the text is on top of the images
-      color: "white",
-      textAlign: "center",
-      fontSize: "35vw", // Size for "GALLERY" text
-      padding: '20px',
-      opacity: 1,
-      textShadow: `0px 0px 15px rgba(0, 0, 0, 0.1)`, // Outline glow effect for the text
-    };
+    // Blob animation keyframe
+    const blobAnimationStyle = {
+      animation: 'blob 25s infinite', // Slower animation for a more fluid effect
+    };    
 
     const imageContainerStyle = {
       flex: 1,
       backgroundSize: "cover",
       backgroundPosition: "center",
-      // border: "5px solid black", // Added black border
+      transition: 'border-radius 2s ease-in-out, transform 2s ease-in-out',
+      border: '5px solid rgba(255, 255, 255, 0.6)',
+      borderRadius: '30% 70% 70% 30%', // Initial blob shape
       ...fadeStyle,
+      ...blobAnimationStyle,
     };
 
     const containerStyle = {
@@ -87,6 +80,21 @@ const GalleryBody = React.forwardRef(
       gap: "10px", // Added spacing between the images
       backgroundColor: 'rgba(0, 0, 0, 1)',
       padding: "10px", // Padding around the entire container
+    };
+
+    // Updated text overlay style for "GALLERY" div
+    const textOverlayStyle = {
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      zIndex: 2, // Ensure the text is on top of the images
+      color: "white",
+      textAlign: "center",
+      fontSize: "25vw", // Size for "GALLERY" text
+      padding: '20px',
+      opacity: 1,
+      textShadow: `0px 0px 15px rgba(0, 0, 0, 0.1)`, // Outline glow effect for the text
     };
 
     return (

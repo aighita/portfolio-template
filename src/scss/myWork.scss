@@ -1,0 +1,75 @@
+/* galleryDisplay.scss */
+body {
+    background-color: black; /* Set background color to black */
+    margin: 0;
+}
+
+.display-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+    overflow: hidden; /* Prevents scrolling */
+}
+
+.frame {
+    position: relative;
+    height: 33.33vh; /* Each frame takes one-third of the viewport height */
+    width: 100%;
+    overflow: hidden; /* Hide overflow when the frame scales up */
+    transition: transform 0.4s ease, z-index 0.4s ease; /* Smooth scaling effect */
+    z-index: 0; /* Default z-index */
+    border: 5px solid black;
+}
+
+.photo {
+    height: 100%; /* The photo fills the frame */
+    width: 100%;
+    object-fit: cover; /* Ensures the photo covers the space without distortion */
+    position: relative;
+    opacity: 1;
+    transition: transform 0.4s ease, opacity 0.5s ease-in-out; /* Transition for smooth scaling and opacity change */
+}
+
+.dim-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.dim-overlay:hover {
+    opacity: 1;
+}
+
+.direction-arrow {
+    font-size: 3rem;
+    color: white;
+    margin-right: 10px;
+}
+
+.caption-text {
+    font-size: 2rem;
+    color: white;
+}
+
+/* Hover effect for photo and its frame: slight zoom and floating effect */
+.frame:hover {
+    transform: scale(1.1); /* Scale the container slightly */
+    z-index: 10; /* Bring the container above others */
+    border: 0px;
+}
+
+.frame:hover .photo {
+    transform: scale(1.05); /* Also slightly zoom the photo */
+    opacity: 0.9; /* Slightly dim the photo */
+    border: 0px;
+}

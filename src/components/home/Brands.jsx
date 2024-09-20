@@ -39,7 +39,9 @@ const Brands = ({ heading }) => {
             // Map through the logos and display them in 3-per-row format
             logos.map((logo, index) => (
               <Col key={index} xs={12} sm={4} className="d-flex justify-content-center mb-4">
-                <img src={logo} alt={`Brand logo ${index + 1}`} className="img-fluid logo-image" />
+                <div className="logo-container bg-dark">
+                  <img src={logo} alt={`Brand logo ${index + 1}`} className="img-fluid logo-image" />
+                </div>
               </Col>
             ))
           )}
